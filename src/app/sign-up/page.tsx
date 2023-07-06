@@ -52,8 +52,36 @@ function SignInForm() {
 
     return (
         <div className="shadow-xl rounded-lg grid px-12 py-8 gap-4 bg-neutral-400">
-            <div className="col-6 auth-widget">
-                <AuthForm />
+            <div className="shadow-xl rounded-lg grid px-12 py-8 gap-4 bg-neutral-400">
+                <div>
+                    <h1 className="text-3xl font-bold">Sign in</h1>
+                    <h2 className="text-base">To personilize your catalog</h2>
+                </div>
+                <input
+                    className="border rounded-md px-3 py-1 text-black"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                />
+                <input
+                    className="border rounded-md px-3 py-1 text-black"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                />
+                <div className="grid place-items-center">
+                    <button
+                        onClick={handleSignUp}
+                        className="bg-white text-neutral-400 px-6 py-2 rounded-xl font-bold"
+                    >
+                        Sign Up
+                    </button>
+                    <h2>{message}</h2>
+                </div>
             </div>
         </div>
     );
